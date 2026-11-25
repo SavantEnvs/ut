@@ -1,0 +1,10 @@
+project: savantenvs/ut
+target: fuzz_cli
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cli/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_cli @@
+    afl: true
+    timeout: 5

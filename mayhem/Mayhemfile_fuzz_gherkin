@@ -1,0 +1,10 @@
+project: savantenvs/ut
+target: fuzz_gherkin
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gherkin/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_gherkin
+    libfuzzer: true
+    timeout: 5

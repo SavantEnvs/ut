@@ -1,0 +1,9 @@
+-r
+console
+-x
+3
+-d
+--order
+lex
+-o
+foo
